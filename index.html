@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-</div>scale=1">
   <title>Gembody Ltd</title>
   <style>
     body {
@@ -17,6 +17,7 @@
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
     header img {
       height: 50px;
@@ -45,16 +46,47 @@
       font-size: 0.9rem;
       color: #555;
     }
+    .buttons {
+      margin-top: 1rem;
+    }
+    .buttons a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #004080;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .buttons a:hover {
+      background-color: #003060;
+    }
+    .logos {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .logos img {
+      height: 50px;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo.jpg" alt="Gembody Ltd Logo">
-  <h1>Gembody Ltd</h1>
-  <p>AI-Powered Ultrasound Innovation</p>
+  <div style="display: flex; align-items: center;">
+    <img src="logo.jpg" alt="Gembody Ltd Logo">
+    <div>
+      <h1>Gembody Ltd</h1>
+      <p>AI-Powered Ultrasound Innovation</p>
+    </div>
+  </div>
+  <div class="buttons">
+    <a href="#products">Products</a>
+    <a href="#collaboration">Collaboration</a>
+  </div>
 </header>
-
 <div class="container">
 
   <section class="intro">
@@ -72,6 +104,17 @@
     <h2>GEMView™ – Portable AI Ultrasound Scanner</h2>
     <p>GEMView™ is a handheld, AI-enabled ultrasound device built for field use and remote clinics. It delivers real-time diagnostic analysis without requiring full imaging, enabling fast, low-cost healthcare deployment anywhere.</p>
     <img src="Picture33.jpg" alt="GEMView product image (replace this)">
+  </section>
+
+  <section class="collaboration">
+    <h2>Collaboration</h2>
+    <p>We are actively seeking partnerships with healthcare providers, research institutions, and technology innovators. Together, we can advance the future of diagnostic imaging and improve access to quality healthcare worldwide.</p>
+    <p>We are now proudly funded by HKSTP and PolyU, enabling us to push the boundaries of innovation in diagnostic imaging.</p>
+    <div class="logos">
+      <img src="hkstp_logo.png" alt="HKSTP Logo">
+      <img src="polyu_logo.png" alt="PolyU Logo">
+    </div>
+    <p>If you are interested in collaborating with us, please reach out via <a href="mailto:collaborate@gembody.com">collaborate@gembody.com</a>.</p>
   </section>
 
   <section class="contact">
