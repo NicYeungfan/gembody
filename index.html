@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microfund</title>
+  <title>Gembody</title>
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
     header { 
       background: rgba(0, 64, 128, 0.9); 
       color: white; 
@@ -12,6 +17,18 @@
       text-align: center; 
       position: relative; 
       overflow: hidden; 
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto;
+      max-width: 80px;
+      height: auto;
+    }
+
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 24px;
     }
 
     header::before {
@@ -43,7 +60,8 @@
 </head>
 <body>
   <header>
-    Welcome to Microfund
+    <img src="logo.jpg" alt="Gembody Ltd">
+    <h1>Welcome to Microfund</h1>
   </header>
 </body>
 </html>
