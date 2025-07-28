@@ -2,66 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gembody</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gembody Ltd</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
     }
-
-    header { 
-      background: rgba(0, 64, 128, 0.9); 
-      color: white; 
-      padding: 20px; 
-      text-align: center; 
-      position: relative; 
-      overflow: hidden; 
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem 2rem;
     }
-
-    header img {
-      display: block;
-      margin: 0 auto;
-      max-width: 80px;
-      height: auto;
+    h1, h2 {
+      margin: 0;
     }
-
-    header h1 {
-      margin: 10px 0 0;
-      font-size: 24px;
+    .container {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
     }
-
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.3) 0,
-        rgba(255, 255, 255, 0.3) 2px,
-        transparent 2px,
-        transparent 4px
-      );
-      animation: wave 2s linear infinite;
+    .product {
+      margin-bottom: 3rem;
     }
-
-    @keyframes wave {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.jpg" alt="Gembody Ltd">
-    <h1>Welcome to Microfund</h1>
-  </header>
+
+<header>
+  <h1>Gembody Ltd</h1>
+  <p>AI-Powered Ultrasound Innovation</p>
+</header>
+
+<div class="container">
+
+  <section class="intro">
+    <h2>About Us</h2>
+    <p>Gembody Ltd develops intelligent ultrasound solutions for remote healthcare and preventive diagnostics. Our mission is to democratize access to early vascular and soft-tissue assessment through portable, AI-integrated platforms.</p>
+  </section>
+
+  <section class="product">
+    <h2>SonicVein™ – Remote Diagnostic Platform</h2>
+    <p>SonicVein™ is an AI-powered software platform for remote screening and early diagnosis of varicose veins. It processes raw ultrasound signals using deep learning to provide non-invasive, interpretable insights—ideal for primary care or telehealth use.</p>
+    <img src="sonicvein.jpg" alt="SonicVein product image (replace this)">
+  </section>
+
+  <section class="product">
+    <h2>GEMView™ – Portable AI Ultrasound Scanner</h2>
+    <p>GEMView™ is a handheld, AI-enabled ultrasound device built for field use and remote clinics. It delivers real-time diagnostic analysis without requiring full imaging, enabling fast, low-cost healthcare deployment anywhere.</p>
+    <img src="gemview.jpg" alt="GEMView product image (replace this)">
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:info@gembody.com">info@gembody.com</a></p>
+    <p>Location: Hong Kong SAR / International Distribution</p>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2025 Gembody Ltd. All rights reserved.
+</footer>
+
 </body>
 </html>
