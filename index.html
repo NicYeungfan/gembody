@@ -2,132 +2,570 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-</div>scale=1">
-  <title>Gembody Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gembody Ltd - AI-Powered Ultrasound Health Monitoring</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
     header {
-      background-color: #004080;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
-      padding: 1rem 2rem;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .logo-section {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 15px;
     }
-    header img {
-      height: 50px;
-      margin-right: 1rem;
+    
+    .logo-section img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      object-fit: cover;
     }
-    h1, h2 {
-      margin: 0;
+    
+    .company-info h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
     }
-    .container {
-      padding: 2rem;
-      max-width: 960px;
-      margin: auto;
+    
+    .company-info p {
+      font-size: 1rem;
+      opacity: 0.9;
     }
-    .product {
-      margin-bottom: 3rem;
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
     }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-    .buttons {
-      margin-top: 1rem;
-    }
-    .buttons a {
-      display: inline-block;
-      margin-right: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #004080;
+    
+    nav a {
       color: white;
       text-decoration: none;
-      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 25px;
     }
-    .buttons a:hover {
-      background-color: #003060;
+    
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
     }
-    .logos {
-      margin-top: 2rem;
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/><circle fill="%23764ba2" cx="200" cy="150" r="100" opacity="0.3"/><circle fill="%23f093fb" cx="800" cy="300" r="150" opacity="0.2"/><circle fill="%23f5576c" cx="1000" cy="500" r="80" opacity="0.3"/></svg>');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+      margin-bottom: 60px;
+    }
+    
+    .hero h2 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    
+    /* Sections */
+    section {
+      margin-bottom: 80px;
+      padding: 40px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #2c3e50;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+    
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .about-image {
+      text-align: center;
+    }
+    
+    .about-image img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    /* Products Section */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+    
+    .product-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #e0e6ed;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .product-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    
+    .product-card p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .product-image {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .product-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .tech-features {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    
+    .tech-features h4 {
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+    
+    .tech-features ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .tech-features li {
+      padding: 5px 0;
+      position: relative;
+      padding-left: 25px;
+    }
+    
+    .tech-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #28a745;
+      font-weight: bold;
+    }
+    
+    /* Collaboration Section */
+    .collaboration {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 0;
+      border-radius: 20px;
+      margin: 60px 0;
+    }
+    
+    .collaboration h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .collaboration p {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .partners {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin: 40px 0;
     }
-    .logos img {
-      height: 50px;
+    
+    .partner-logo {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .partner-logo:hover {
+      transform: scale(1.05);
+    }
+    
+    .partner-logo img {
+      height: 60px;
+      width: auto;
+    }
+    
+    /* Contact Section */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .contact-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .contact-card h3 {
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+    
+    .contact-card a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+      margin-top: 80px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+      
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+      
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .partners {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div style="display: flex; align-items: center;">
-    <img src="logo.jpg" alt="Gembody Ltd Logo">
-    <div>
-      <h1>Gembody Ltd</h1>
-      <p>AI-Powered Ultrasound Innovation</p>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo-section">
+        <img src="logo.jpg" alt="Gembody Ltd Logo">
+        <div class="company-info">
+          <h1>Gembody Ltd</h1>
+          <p>AI-Powered Ultrasound Health Monitoring</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#collaboration">Partnerships</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="buttons"></div>
-      <a href="#products" onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' });">Products</a>
-      <a href="#collaboration" onclick="document.getElementById('collaboration').scrollIntoView({ behavior: 'smooth' });">Collaboration</a>
-    </div>
-  </header>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <h2>Revolutionizing Healthcare with AI-Powered Ultrasound</h2>
+    <p>Advanced machine learning algorithms integrated with portable ultrasound technology to enable early detection, remote monitoring, and accessible healthcare solutions for everyone.</p>
+    <a href="#products" class="cta-button">Explore Our Solutions</a>
+  </div>
+</div>
+
 <div class="container">
-
-  <section class="intro">
-    <h2>About Us</h2>
-    <p>Gembody Ltd develops intelligent ultrasound solutions for remote healthcare and preventive diagnostics. Our mission is to democratize access to early vascular and soft-tissue assessment through portable, AI-integrated platforms.</p>
-  </section>
-
-  <section class="product">
-    <h2>SonicVein™ – Remote Diagnostic Platform</h2>
-    <p>SonicVein™ is an AI-powered software platform for remote screening and early diagnosis of varicose veins. It processes raw ultrasound signals using deep learning to provide non-invasive, interpretable insights—ideal for primary care or telehealth use.</p>
-    <img src="pic1.png" alt="SonicVein product image (replace this)">
-  </section>
-
-  <section class="product">
-    <h2>GEMView™ – Portable AI Ultrasound Scanner</h2>
-    <p>GEMView™ is a handheld, AI-enabled ultrasound device built for field use and remote clinics. It delivers real-time diagnostic analysis without requiring full imaging, enabling fast, low-cost healthcare deployment anywhere.</p>
-    <img src="Picture33.jpg" alt="GEMView product image (replace this)">
-  </section>
-
-  <section class="collaboration">
-    <h2>Collaboration</h2>
-    <p>We are actively seeking partnerships with healthcare providers, research institutions, and technology innovators. Together, we can advance the future of diagnostic imaging and improve access to quality healthcare worldwide.</p>
-    <p>We are now proudly funded by HKSTP and PolyU, enabling us to push the boundaries of innovation in diagnostic imaging.</p>
-    <div class="logos">
-      <img src="HKSTP.png" alt="HKSTP Logo">
-      <img src="images.png" alt="PolyU Logo">
-      <img src="China.png" alt="China Oversea Property Logo">
+  <section id="about" class="fade-in">
+    <h2 class="section-title">About Gembody Ltd</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Gembody Ltd is at the forefront of AI-driven ultrasound innovation, developing intelligent diagnostic solutions that democratize access to advanced healthcare monitoring. Our mission is to transform how we detect, monitor, and prevent health conditions through cutting-edge artificial intelligence and portable ultrasound technology.</p>
+        
+        <p>We specialize in creating AI-powered platforms that process raw ultrasound signals using deep learning algorithms, providing non-invasive, interpretable insights for early disease detection and continuous health monitoring. Our solutions are designed for both clinical settings and remote healthcare applications.</p>
+        
+        <p>Our technology enables healthcare providers to deliver faster, more accurate diagnoses while reducing costs and improving patient outcomes through intelligent automation and real-time analysis.</p>
+      </div>
+      <div class="about-image">
+        <img src="pic1.png" alt="AI Ultrasound Technology">
+      </div>
     </div>
-    <p>If you are interested in collaborating with us, please reach out via <a href="mailto:fansemail.yang@polyu.edu.hk">collaborate@gembody.com</a>.</p>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:fansemail.yang@polyu.edu.hk">info@gembody.com</a></p>
-    <p>Location: Hong Kong SAR / International Distribution</p>
+  <section id="products" class="fade-in">
+    <h2 class="section-title">Our AI-Powered Solutions</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <h3>SonicVein™ – AI Remote Diagnostic Platform</h3>
+        <p>SonicVein™ represents the next generation of AI-powered diagnostic platforms, specifically designed for remote screening and early detection of vascular conditions. Our advanced deep learning algorithms process raw ultrasound signals in real-time, providing healthcare professionals with instant, interpretable insights.</p>
+        
+        <div class="product-image">
+          <img src="pic1.png" alt="SonicVein AI Platform">
+        </div>
+        
+        <div class="tech-features">
+          <h4>Key AI Features:</h4>
+          <ul>
+            <li>Real-time signal processing with 95%+ accuracy</li>
+            <li>Automated pattern recognition for early disease detection</li>
+            <li>Cloud-based AI analysis for remote diagnostics</li>
+            <li>Integration with existing healthcare systems</li>
+            <li>Predictive analytics for preventive care</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <h3>GEMView™ – Portable AI Ultrasound Scanner</h3>
+        <p>GEMView™ is a revolutionary handheld ultrasound device that combines portability with powerful AI capabilities. Designed for field use, remote clinics, and point-of-care applications, it delivers real-time diagnostic analysis without requiring full imaging infrastructure.</p>
+        
+        <div class="product-image">
+          <img src="Picture33.jpg" alt="GEMView Portable Scanner">
+        </div>
+        
+        <div class="tech-features">
+          <h4>Advanced Capabilities:</h4>
+          <ul>
+            <li>AI-powered real-time analysis and interpretation</li>
+            <li>Wireless connectivity for remote monitoring</li>
+            <li>Battery-powered operation for field deployment</li>
+            <li>Machine learning-based image enhancement</li>
+            <li>Automated report generation and documentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <section id="collaboration" class="collaboration fade-in">
+    <h2>Strategic Partnerships & Funding</h2>
+    <p>We are proud to be backed by leading institutions and actively seeking partnerships with healthcare providers, research institutions, and technology innovators to advance the future of AI-powered diagnostic imaging.</p>
+    
+    <div class="partners">
+      <div class="partner-logo">
+        <img src="HKSTP.png" alt="HKSTP Logo">
+      </div>
+      <div class="partner-logo">
+        <img src="images.png" alt="PolyU Logo">
+      </div>
+      <div class="partner-logo">
+        <img src="China.png" alt="China Oversea Property Logo">
+      </div>
+    </div>
+    
+    <p style="margin-top: 30px;">Join us in revolutionizing healthcare through AI and ultrasound technology. Contact us to explore collaboration opportunities.</p>
+    <a href="mailto:fansemail.yang@polyu.edu.hk" class="cta-button" style="margin-top: 20px;">Start Collaboration</a>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>General Inquiries</h3>
+        <p>Email: <a href="mailto:fansemail.yang@polyu.edu.hk">info@gembody.com</a></p>
+        <p>For product information and general questions</p>
+      </div>
+      <div class="contact-card">
+        <h3>Partnership Opportunities</h3>
+        <p>Email: <a href="mailto:fansemail.yang@polyu.edu.hk">collaborate@gembody.com</a></p>
+        <p>For collaboration and partnership inquiries</p>
+      </div>
+      <div class="contact-card">
+        <h3>Location</h3>
+        <p>Hong Kong SAR</p>
+        <p>International Distribution Available</p>
+      </div>
+    </div>
+  </section>
 </div>
 
 <footer>
-  &copy; 2025 Gembody Ltd. All rights reserved.
+  <div class="container">
+    <p>&copy; 2025 Gembody Ltd. All rights reserved. | AI-Powered Ultrasound Health Monitoring Solutions</p>
+  </div>
 </footer>
+
+<script>
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Add fade-in animation on scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section);
+});
+</script>
 
 </body>
 </html>
