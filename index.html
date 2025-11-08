@@ -334,6 +334,74 @@
       text-decoration: underline;
     }
     
+    /* News Section */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .news-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #e0e6ed;
+    }
+    
+    .news-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .news-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .news-content {
+      padding: 30px;
+    }
+    
+    .news-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    
+    .news-content p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    
+    .news-link {
+      display: inline-block;
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .news-link:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    
+    .news-link::after {
+      content: ' →';
+      transition: transform 0.3s ease;
+    }
+    
+    .news-link:hover::after {
+      transform: translateX(5px);
+    }
+    
     /* Footer */
     footer {
       background: #2c3e50;
@@ -365,6 +433,10 @@
       }
       
       .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .news-grid {
         grid-template-columns: 1fr;
       }
       
@@ -407,6 +479,7 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#products">Products</a></li>
+          <li><a href="#news">News</a></li>
           <li><a href="#collaboration">Partnerships</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -480,6 +553,38 @@
             <li>Machine learning-based image enhancement</li>
             <li>Automated report generation and documentation</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="fade-in">
+    <h2 class="section-title">Latest News & Achievements</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="hicool2025.jpg" alt="HICOOL 2025 Exhibition" class="news-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 250%22%3E%3Crect fill=%22%23667eea%22 width=%22400%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22%3EHICOOL 2025%3C/text%3E%3C/svg%3E'">
+        <div class="news-content">
+          <h3>HICOOL 2025 Exhibition</h3>
+          <p>We are proud to participate in the HICOOL 2025 Global Entrepreneur Summit and Exhibition, showcasing our innovative AI-powered ultrasound health monitoring solutions to a global audience of investors, partners, and industry leaders.</p>
+          <a href="https://www.hicool.cn" target="_blank" rel="noopener noreferrer" class="news-link">Visit Official Website</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <img src="ces2026.jpg" alt="CES 2026" class="news-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 250%22%3E%3Crect fill=%22%23764ba2%22 width=%22400%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22%3ECES 2026%3C/text%3E%3C/svg%3E'">
+        <div class="news-content">
+          <h3>CES 2026 Participation</h3>
+          <p>Gembody Ltd is excited to announce our participation in CES 2026, the world's largest consumer electronics show. We will be demonstrating our cutting-edge portable AI ultrasound technology and health monitoring solutions.</p>
+          <a href="https://www.ces.tech" target="_blank" rel="noopener noreferrer" class="news-link">Visit Official Website</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <img src="asia-ai-top30.jpg" alt="Asia AI Startup Top 30" class="news-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 250%22%3E%3Crect fill=%22%23f093fb%22 width=%22400%22 height=%22250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22%3EAsia AI Startup%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22%3ETop 30 HK%3C/text%3E%3C/svg%3E'">
+        <div class="news-content">
+          <h3>Asia AI Startup Top 30 in HK Area</h3>
+          <p>We are honored to be recognized as one of the Top 30 AI Startups in the Hong Kong area. This achievement reflects our commitment to innovation and excellence in AI-powered healthcare solutions.</p>
+          <a href="https://www.startmeup.hk" target="_blank" rel="noopener noreferrer" class="news-link">Learn More</a>
         </div>
       </div>
     </div>
